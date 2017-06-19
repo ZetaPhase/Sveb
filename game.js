@@ -93,13 +93,25 @@ var isResult = false;
 //for (var i=1; i<10; i++) content[i] = 'n';
 
 //setup nextItem tile
+var nextItem;
 var nextItemCanvas = document.getElementById('nextItem');
-var nextItemContent = nextItemCanvas.getContext('2d');
+var nextItemContext = nextItemCanvas.getContext('2d');
+var possibleItems = ['triangle', 'triangle', 'triangle', 'triangle', 'triangle',
+                     'circle', 'circle',
+                     'nabla', 'nabla',
+                     'rectangle'];
 
 var content = new Board();
 
 console.log(content.getAvailableMoves());
 
+function updateNextItem(){
+  var item = possibleItems[Math.floor(Math.random()*possibleItems.length)];
+  nextItem = item;
+  if(item == 'triangle'){
+
+  }
+}
 
 function loop(x)
 {
