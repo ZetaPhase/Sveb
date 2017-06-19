@@ -91,6 +91,11 @@ for(var i=0; i<36; i++) bDisabled[i] = false; //all buttons are enabled in the b
 var isResult = false;
 //var content = [];
 //for (var i=1; i<10; i++) content[i] = 'n';
+
+//setup nextItem tile
+var nextItemCanvas = document.getElementById('nextItem');
+var nextItemContent = nextItemCanvas.getContext('2d');
+
 var content = new Board();
 
 console.log(content.getAvailableMoves());

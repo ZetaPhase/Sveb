@@ -26,7 +26,7 @@ canvas:hover
 
 #canvasDiv
 {
-    margin: 50px auto 40px;
+    margin: 10px auto 40px;
 }
 
 #reloadButton, #githublink
@@ -58,5 +58,5 @@ canvas:hover
     border: 1px solid #000;
     border-width: 2px;
     width: 150px;
-    margin: 50px auto 10px;
+    margin: 10px auto 10px;
 }
