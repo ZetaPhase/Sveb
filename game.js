@@ -80,13 +80,13 @@ function Board() {
 }
 
 var button = []; //stores the canvases
-for(var i=1; i<10; i++) button[i] = document.getElementById('canvas'+i);
+for(var i=0; i<36; i++) button[i] = document.getElementById('canvas'+i);
 
 var ctx = []; //stores the context of the canvases
-for(var i=1; i<10; i++) ctx[i] = button[i].getContext('2d');
+for(var i=0; i<36; i++) ctx[i] = button[i].getContext('2d');
 
 var bDisabled = []; //stores the availability of the button
-for(var i=1; i<10; i++) bDisabled[i] = false; //all buttons are enabled in the beginning
+for(var i=0; i<36; i++) bDisabled[i] = false; //all buttons are enabled in the beginning
 
 var isResult = false;
 //var content = [];
@@ -95,8 +95,6 @@ var content = new Board();
 
 console.log(content.getAvailableMoves());
 
-var xTurn = true; //X:true O:false
-var ai = new AI('O');
 
 function loop(x)
 {
