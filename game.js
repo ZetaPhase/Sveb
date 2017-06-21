@@ -112,10 +112,10 @@ function updateNextItem(){
     nextItemContext.lineWidth = 3;
     nextItemContext.strokeStyle = "#aa3c36";
     nextItemContext.beginPath();
-    nextItemContext.moveTo(15, 15);
-    nextItemContext.lineTo(65, 15);
-    nextItemContext.lineTo(40, 65);
-    nextItemContext.lineTo(15, 15);
+    nextItemContext.moveTo(40, 15);
+    nextItemContext.lineTo(65, 65);
+    nextItemContext.lineTo(15, 65);
+    nextItemContext.lineTo(40, 15);
     nextItemContext.stroke();
     nextItemContext.closePath();
   }else if(item == 'circle'){ //draw circle in next item box
@@ -128,10 +128,10 @@ function updateNextItem(){
     nextItemContext.lineWidth = 3;
     nextItemContext.strokeStyle = "#aa3c36";
     nextItemContext.beginPath();
-    nextItemContext.moveTo(40, 15);
-    nextItemContext.lineTo(65, 65);
-    nextItemContext.lineTo(15, 65);
-    nextItemContext.lineTo(40, 15);
+    nextItemContext.moveTo(15, 15);
+    nextItemContext.lineTo(65, 15);
+    nextItemContext.lineTo(40, 65);
+    nextItemContext.lineTo(15, 15);
     nextItemContext.stroke();
     nextItemContext.closePath();
   }else if(item == 'rectangle'){
