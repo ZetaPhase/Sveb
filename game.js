@@ -121,7 +121,7 @@ function updateNextItem(){
   }else if(item == 'circle'){ //draw circle in next item box
     nextItemContext.lineWidth = 3;
     nextItemContext.strokeStyle = "#aa3c36";
-    nextItemContext.arc(nextItemCanvas.width/2, nextItemCanvas.height/2, 40, 0, 2*Math.PI, false);
+    nextItemContext.arc(nextItemCanvas.width/2, nextItemCanvas.height/2, 30, 0, 2*Math.PI, false);
     nextItemContext.stroke();
     nextItemContext.closePath();
   }else if(item == 'nabla'){ //draw inverted triangle
