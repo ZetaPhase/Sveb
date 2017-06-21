@@ -108,46 +108,32 @@ console.log(content.getAvailableMoves());
 function updateNextItem(){
   var item = possibleItems[Math.floor(Math.random()*possibleItems.length)];
   nextItem = item;
+	nextItemContext.lineWidth = 3;
+	nextItemContext.strokeStyle = "#aa3c36";
   if(item == 'triangle'){ //draw triangle in next item box
-    nextItemContext.lineWidth = 3;
-    nextItemContext.strokeStyle = "#aa3c36";
     nextItemContext.beginPath();
     nextItemContext.moveTo(40, 15);
     nextItemContext.lineTo(65, 65);
     nextItemContext.lineTo(15, 65);
     nextItemContext.lineTo(40, 15);
-    nextItemContext.stroke();
-    nextItemContext.closePath();
   }else if(item == 'circle'){ //draw circle in next item box
-    nextItemContext.lineWidth = 3;
-    nextItemContext.strokeStyle = "#aa3c36";
     nextItemContext.arc(nextItemCanvas.width/2, nextItemCanvas.height/2, 30, 0, 2*Math.PI, false);
-    nextItemContext.stroke();
-    nextItemContext.closePath();
   }else if(item == 'nabla'){ //draw inverted triangle
-    nextItemContext.lineWidth = 3;
-    nextItemContext.strokeStyle = "#aa3c36";
     nextItemContext.beginPath();
     nextItemContext.moveTo(15, 15);
     nextItemContext.lineTo(65, 15);
     nextItemContext.lineTo(40, 65);
     nextItemContext.lineTo(15, 15);
-    nextItemContext.stroke();
-    nextItemContext.closePath();
-  }else if(item == 'rectangle'){
-    //draw long vertical rectangle
-		nextItemContext.lineWidth = 3;
-		nextItemContext.strokeStyle = "#aa3c36";
+  }else if(item == 'rectangle'){ //draw long vertical rectangle
 		nextItemContext.beginPath();
 		nextItemContext.moveTo(30, 15);
 		nextItemContext.lineTo(50, 15);
 		nextItemContext.lineTo(50, 65);
 		nextItemContext.lineTo(30, 65);
 		nextItemContext.lineTo(30, 15);
-		nextItemContext.stroke();
-		nextItemContext.closePath;
   }
-  //if(item == 'circle')
+	nextItemContext.stroke();
+	nextItemContext.closePath();
 }
 
 updateNextItem();
