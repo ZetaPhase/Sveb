@@ -105,20 +105,46 @@ var content = new Board();
 
 console.log(content.getAvailableMoves());
 
-function drawTriangle(){
+function drawTriangle(context){
 	//draw triangle
+	context.beginPath();
+	nextItemContext.moveTo(40, 15);
+	nextItemContext.lineTo(65, 65);
+	nextItemContext.lineTo(15, 65);
+	nextItemContext.lineTo(40, 15);
+	context.stroke();
+	context.closePath();
 }
 
-function drawCircle(){
+function drawCircle(context){
 	//draw circle
+	context.beginPath();
+	context.arc(nextItemCanvas.width/2, nextItemCanvas.height/2, 30, 0, 2*Math.PI, false);
+	context.stroke();
+	context.closePath();
 }
 
-function drawNabla(){
+function drawNabla(context){
 	//draw nabla
+	context.beginPath();
+	nextItemContext.moveTo(15, 15);
+	nextItemContext.lineTo(65, 15);
+	nextItemContext.lineTo(40, 65);
+	nextItemContext.lineTo(15, 15);
+	context.stroke();
+	context.closePath();
 }
 
-function drawRectangle(){
+function drawRectangle(context){
 	//draw rectangle
+	context.beginPath();
+	nextItemContext.moveTo(30, 15);
+	nextItemContext.lineTo(50, 15);
+	nextItemContext.lineTo(50, 65);
+	nextItemContext.lineTo(30, 65);
+	nextItemContext.lineTo(30, 15);
+	context.stroke();
+	context.closePath();
 }
 
 function updateNextItem(){
