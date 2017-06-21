@@ -108,10 +108,10 @@ console.log(content.getAvailableMoves());
 function drawTriangle(context){
 	//draw triangle
 	context.beginPath();
-	nextItemContext.moveTo(40, 15);
-	nextItemContext.lineTo(65, 65);
-	nextItemContext.lineTo(15, 65);
-	nextItemContext.lineTo(40, 15);
+	context.moveTo(40, 15);
+	context.lineTo(65, 65);
+	context.lineTo(15, 65);
+	context.lineTo(40, 15);
 	context.stroke();
 	context.closePath();
 }
@@ -127,10 +127,10 @@ function drawCircle(context){
 function drawNabla(context){
 	//draw nabla
 	context.beginPath();
-	nextItemContext.moveTo(15, 15);
-	nextItemContext.lineTo(65, 15);
-	nextItemContext.lineTo(40, 65);
-	nextItemContext.lineTo(15, 15);
+	context.moveTo(15, 15);
+	context.lineTo(65, 15);
+	context.lineTo(40, 65);
+	context.lineTo(15, 15);
 	context.stroke();
 	context.closePath();
 }
@@ -138,11 +138,11 @@ function drawNabla(context){
 function drawRectangle(context){
 	//draw rectangle
 	context.beginPath();
-	nextItemContext.moveTo(30, 15);
-	nextItemContext.lineTo(50, 15);
-	nextItemContext.lineTo(50, 65);
-	nextItemContext.lineTo(30, 65);
-	nextItemContext.lineTo(30, 15);
+	context.moveTo(30, 15);
+	context.lineTo(50, 15);
+	context.lineTo(50, 65);
+	context.lineTo(30, 65);
+	context.lineTo(30, 15);
 	context.stroke();
 	context.closePath();
 }
@@ -150,7 +150,6 @@ function drawRectangle(context){
 function updateNextItem(){
   var item = possibleItems[Math.floor(Math.random()*possibleItems.length)];
   nextItem = item;
-	nextItemCanvas.style.webkitTransform = "rotateY(180deg)";
 	nextItemContext.lineWidth = 3;
 	nextItemContext.strokeStyle = "#aa3c36";
 	if(item == 'triangle'){ //draw triangle in next item box
@@ -166,6 +165,8 @@ function updateNextItem(){
 
 updateNextItem();
 
+console.log(nextItem);
+
 function loop(x)
 {
     if(!bDisabled[x]){ //button does not currently contain X or O and therefore is enabled.
@@ -176,17 +177,20 @@ function loop(x)
 
         content.makeMove('X', [Math.floor(x/6), x%6]);
 
-        setTimeout(function(){
-            ctx[x].lineWidth = 3;
-            ctx[x].beginPath();
-            ctx[x].moveTo(15, 15);
-            ctx[x].lineTo(65, 65);
-            ctx[x].moveTo(65, 15);
-            ctx[x].lineTo(15, 65);
-            ctx[x].stroke();
-            ctx[x].closePath();
-        }, 300);
 				nextItemContext.clearRect(0, 0, nextItemCanvas.width, nextItemCanvas.height);
+
+				ctx[x].lineWidth = 3;
+				ctx[x].strokeStyle = "#aa3c36";
+				if(nextItem == 'triangle'){
+					drawTriangle(ctx[x]);
+				}else if(nextItem == 'circle'){
+					drawCircle(ctx[x]);
+				}else if(nextItem == 'nabla'){
+					drawNabla(ctx[x]);
+				}else if(nextItem == 'rectangle'){
+					drawRectangle(ctx[x]);
+				}
+
 				updateNextItem();
     }
 }
