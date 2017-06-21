@@ -105,6 +105,22 @@ var content = new Board();
 
 console.log(content.getAvailableMoves());
 
+function drawTriangle(){
+	//draw triangle
+}
+
+function drawCircle(){
+	//draw circle
+}
+
+function drawNabla(){
+	//draw nabla
+}
+
+function drawRectangle(){
+	//draw rectangle
+}
+
 function updateNextItem(){
   var item = possibleItems[Math.floor(Math.random()*possibleItems.length)];
   nextItem = item;
