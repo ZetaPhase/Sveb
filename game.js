@@ -136,6 +136,16 @@ function updateNextItem(){
     nextItemContext.closePath();
   }else if(item == 'rectangle'){
     //draw long vertical rectangle
+		nextItemContext.lineWidth = 3;
+		nextItemContext.strokeStyle = "#aa3c36";
+		nextItemContext.beginPath();
+		nextItemContext.moveTo(30, 15);
+		nextItemContext.lineTo(50, 15);
+		nextItemContext.lineTo(50, 65);
+		nextItemContext.lineTo(30, 65);
+		nextItemContext.lineTo(30, 15);
+		nextItemContext.stroke();
+		nextItemContext.closePath;
   }
   //if(item == 'circle')
 }
