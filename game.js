@@ -124,6 +124,10 @@ function updateNextItem(){
     nextItemContext.arc(nextItemCanvas.width/2, nextItemCanvas.height/2, 40, 0, 2*Math.PI, false);
     nextItemContext.stroke();
     nextItemContext.closePath();
+  }else if(item == 'nabla'){
+    //draw inverted triangle
+  }else if(item == 'rectangle'){
+    //draw long vertical rectangle
   }
   //if(item == 'circle')
 }
