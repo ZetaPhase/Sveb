@@ -153,28 +153,15 @@ function updateNextItem(){
 	nextItemCanvas.style.webkitTransform = "rotateY(180deg)";
 	nextItemContext.lineWidth = 3;
 	nextItemContext.strokeStyle = "#aa3c36";
-	nextItemContext.beginPath();
 	if(item == 'triangle'){ //draw triangle in next item box
-		nextItemContext.moveTo(40, 15);
-		nextItemContext.lineTo(65, 65);
-		nextItemContext.lineTo(15, 65);
-		nextItemContext.lineTo(40, 15);
+		drawTriangle(nextItemContext);
 	}else if(item == 'circle'){ //draw circle in next item box
-		nextItemContext.arc(nextItemCanvas.width/2, nextItemCanvas.height/2, 30, 0, 2*Math.PI, false);
+		drawCircle(nextItemContext);
 	}else if(item == 'nabla'){ //draw inverted triangle
-		nextItemContext.moveTo(15, 15);
-		nextItemContext.lineTo(65, 15);
-		nextItemContext.lineTo(40, 65);
-		nextItemContext.lineTo(15, 15);
+		drawNabla(nextItemContext);
 	}else if(item == 'rectangle'){ //draw long vertical rectangle
-		nextItemContext.moveTo(30, 15);
-		nextItemContext.lineTo(50, 15);
-		nextItemContext.lineTo(50, 65);
-		nextItemContext.lineTo(30, 65);
-		nextItemContext.lineTo(30, 15);
+		drawRectangle(nextItemContext);
 	}
-	nextItemContext.stroke();
-	nextItemContext.closePath();
 }
 
 updateNextItem();
