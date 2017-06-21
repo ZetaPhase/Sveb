@@ -124,8 +124,16 @@ function updateNextItem(){
     nextItemContext.arc(nextItemCanvas.width/2, nextItemCanvas.height/2, 40, 0, 2*Math.PI, false);
     nextItemContext.stroke();
     nextItemContext.closePath();
-  }else if(item == 'nabla'){
-    //draw inverted triangle
+  }else if(item == 'nabla'){ //draw inverted triangle
+    nextItemContext.lineWidth = 3;
+    nextItemContext.strokeStyle = "#aa3c36";
+    nextItemContext.beginPath();
+    nextItemContext.moveTo(40, 15);
+    nextItemContext.lineTo(65, 65);
+    nextItemContext.lineTo(15, 65);
+    nextItemContext.lineTo(40, 15);
+    nextItemContext.stroke();
+    nextItemContext.closePath();
   }else if(item == 'rectangle'){
     //draw long vertical rectangle
   }
