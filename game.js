@@ -175,7 +175,7 @@ function loop(x)
 
         button[x].style.webkitTransform = "rotateY(180deg)";
 
-        content.makeMove('X', [Math.floor(x/6), x%6]);
+        content.makeMove(nextItem, [Math.floor(x/6), x%6]);
 
 				nextItemContext.clearRect(0, 0, nextItemCanvas.width, nextItemCanvas.height);
 
