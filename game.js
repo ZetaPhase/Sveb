@@ -41,42 +41,6 @@ function Board() {
 	this.isFull = function() {
 		return this.turnCnt === 36;
 	};
-	/*
-	this.checkForWin = function() {
-		var boardState = this.gamestate;
-		var winner;
-
-		//checking the diagonals
-		if(boardState[1][1] !== '' &&
-			 ((boardState[0][0] === boardState[1][1]
-				 && boardState[2][2] === boardState[1][1])
-				|| (boardState[0][2] === boardState[1][1]
-						&& boardState[2][0] === boardState[1][1]))) {
-			winner = boardState[1][1];
-			return winner;
-		}
-		else {
-			//Checking the horizontals
-			for(var row in boardState) {
-				if(boardState[row][0] !== '' &&
-					 boardState[row][0] === boardState[row][1]
-					 && boardState[row][2] === boardState[row][1]) {
-					winner = boardState[row][0];
-					return winner;
-				}
-			}
-			//Verticals
-			for(var col in boardState) {
-				if(boardState[0][col] !== '' &&
-					 boardState[0][col] === boardState[1][col]
-					 && boardState[1][col] === boardState[2][col]) {
-					winner = boardState[0][col];
-					return winner;
-				}
-			}
-		}
-	};
-  */
 }
 
 var button = []; //stores the canvases
@@ -171,7 +135,6 @@ function loop(x)
 {
     if(!bDisabled[x]){ //button does not currently contain X or O and therefore is enabled.
         bDisabled[x] = true; //button now contains something
-        //console.log("Button pressed.");
 
         button[x].style.webkitTransform = "rotateY(180deg)";
 
