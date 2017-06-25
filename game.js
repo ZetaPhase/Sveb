@@ -157,3 +157,12 @@ function loop(x)
 				updateNextItem();
     }
 }
+
+function groupBoard() //TODO
+{
+	//modifies the content array
+	//groups like tiles together up the growth chart
+	//returns true if group was possible
+
+	//returns false if group was not possible
+}
