@@ -54,8 +54,9 @@ canvas:hover
     font-size: 40px;
     font-family: "Courier";
     font-weight:bold;
-    color: white;
-    border: 1px solid white;
+    color: #2a4720;
+    border: 1px solid #2a4720;
+    background: white;
     border-width: 2px;
     width: 150px;
     margin: 10px auto 10px;

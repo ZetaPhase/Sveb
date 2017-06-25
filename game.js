@@ -115,7 +115,7 @@ function updateNextItem(){
   var item = possibleItems[Math.floor(Math.random()*possibleItems.length)];
   nextItem = item;
 	nextItemContext.lineWidth = 3;
-	nextItemContext.strokeStyle = "#aa3c36";
+	nextItemContext.strokeStyle = "#324c2a";
 	if(item == 'triangle'){ //draw triangle in next item box
 		drawTriangle(nextItemContext);
 	}else if(item == 'circle'){ //draw circle in next item box
@@ -143,7 +143,7 @@ function loop(x)
 				nextItemContext.clearRect(0, 0, nextItemCanvas.width, nextItemCanvas.height);
 
 				ctx[x].lineWidth = 3;
-				ctx[x].strokeStyle = "#aa3c36";
+				ctx[x].strokeStyle = "#324c2a";
 				if(nextItem == 'triangle'){
 					drawTriangle(ctx[x]);
 				}else if(nextItem == 'circle'){
