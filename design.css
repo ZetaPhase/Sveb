@@ -6,7 +6,7 @@
 
 body
 {
-    background: #375e2b;
+    background: #66b24a;
     text-align: center;
 }
 
@@ -31,11 +31,11 @@ canvas:hover
 
 #reloadButton, #githublink
 {
-    border: 1px solid white;
+    border: 1px solid #2a4720;
     border-width: 2px;
     padding: 5px;
     text-decoration: none;
-    color:white;
+    color: #2a4720;
     font-family: "Courier";
     font-weight: bold;
     font-size: 20px;
@@ -46,7 +46,7 @@ canvas:hover
 #reloadButton:hover, #githublink
 {
     font-size: 24px;
-    background: black;
+    background: white;
 }
 
 #title
