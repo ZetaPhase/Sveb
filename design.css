@@ -36,6 +36,7 @@ canvas:hover
     padding: 5px;
     text-decoration: none;
     color: #2a4720;
+    background: white;
     font-family: "Courier";
     font-weight: bold;
     font-size: 20px;
@@ -43,10 +44,9 @@ canvas:hover
 
 }
 
-#reloadButton:hover, #githublink
+#reloadButton:hover, #githublink:hover
 {
     font-size: 24px;
-    background: white;
 }
 
 #title
