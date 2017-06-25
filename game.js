@@ -140,21 +140,29 @@ function loop(x)
 
         content.makeMove(nextItem, [Math.floor(x/6), x%6]);
 
-				nextItemContext.clearRect(0, 0, nextItemCanvas.width, nextItemCanvas.height);
+		nextItemContext.clearRect(0, 0, nextItemCanvas.width, nextItemCanvas.height);
 
-				ctx[x].lineWidth = 3;
-				ctx[x].strokeStyle = "#324c2a";
-				if(nextItem == 'triangle'){
-					drawTriangle(ctx[x]);
-				}else if(nextItem == 'circle'){
-					drawCircle(ctx[x]);
-				}else if(nextItem == 'nabla'){
-					drawNabla(ctx[x]);
-				}else if(nextItem == 'rectangle'){
-					drawRectangle(ctx[x]);
-				}
+		ctx[x].lineWidth = 3;
+		ctx[x].strokeStyle = "#324c2a";
+		if(nextItem == 'triangle'){
+			drawTriangle(ctx[x]);
+		}else if(nextItem == 'circle'){
+			drawCircle(ctx[x]);
+		}else if(nextItem == 'nabla'){
+			drawNabla(ctx[x]);
+		}else if(nextItem == 'rectangle'){
+			drawRectangle(ctx[x]);
+		}
 
-				updateNextItem();
+		updateNextItem();
+
+		/*
+		var groupable = groupBoard();
+		while(groupable){ //keep going if groups can continue to grow up the ladder
+			groupable = groupBoard();
+		}
+		//stop when no more groups can be made.
+		*/
     }
 }
 
