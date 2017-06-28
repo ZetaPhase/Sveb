@@ -14,3 +14,10 @@ Get to higher growth for more points;
 
 GOAL : get as HIGH points as possible.
 
+
+Probabilities:
+
+Triangle : 50%
+Circle: 20%
+Nabla(Inverted Triangle): 20%
+Rectangle: 10%
