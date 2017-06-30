@@ -21,3 +21,10 @@ Triangle : 50%
 Circle: 20%
 Nabla(Inverted Triangle): 20%
 Rectangle: 10%
+
+Score:
+
+Triangle : 2 points
+Circle : 5 points
+Nabla : 7 points
+Rectangle: 15 points
