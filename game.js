@@ -69,6 +69,10 @@ var content = new Board();
 
 console.log(content.getAvailableMoves());
 
+function updatePoints(){ //update score of player every time he makes a move
+	//TO DO
+}
+
 function drawTriangle(context){
 	//draw triangle
 	context.beginPath();
