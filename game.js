@@ -71,6 +71,20 @@ console.log(content.getAvailableMoves());
 
 function updatePoints(){ //update score of player every time he makes a move
 	//TO DO
+	var totalPoints = 0;
+	for(var row=0; row<content.gamestate.length; row++){
+		for(var col=0; col<content.gamestate[0].length; col++){
+			if(content.gamestate[row][col]=='triangle'){
+				totalPoints += 2;
+			}else if(content.gamestate[row][col]=='circle'){
+				totalPoints += 5;
+			}else if(content.gamestate[row][col]=='nabla'){
+				totalPoints += 7;
+			}else if(content.gamestate[row][col]=='rectangle'){
+				totalPoints += 15;
+			}
+		}
+	}
 }
 
 function drawTriangle(context){
