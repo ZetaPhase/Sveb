@@ -70,7 +70,6 @@ var content = new Board();
 console.log(content.getAvailableMoves());
 
 function updatePoints(){ //update score of player every time he makes a move
-	//TO DO
 	var totalPoints = 0;
 	for(var row=0; row<content.gamestate.length; row++){
 		for(var col=0; col<content.gamestate[0].length; col++){
@@ -85,6 +84,11 @@ function updatePoints(){ //update score of player every time he makes a move
 			}
 		}
 	}
+	return totalPoints;
+
+	//Possibly make totalPoints global variable and update
+
+	//Possibly change inner html for score section
 }
 
 function drawTriangle(context){
