@@ -66,11 +66,11 @@ var possibleItems = ['triangle', 'triangle', 'triangle', 'triangle', 'triangle',
                      'rectangle'];
 
 var content = new Board();
+var totalPoints = 0;
 
 console.log(content.getAvailableMoves());
 
 function updatePoints(){ //update score of player every time he makes a move
-	var totalPoints = 0;
 	for(var row=0; row<content.gamestate.length; row++){
 		for(var col=0; col<content.gamestate[0].length; col++){
 			if(content.gamestate[row][col]=='triangle'){
@@ -85,9 +85,6 @@ function updatePoints(){ //update score of player every time he makes a move
 		}
 	}
 	return totalPoints;
-
-	//Possibly make totalPoints global variable and update
-
 	//Possibly change inner html for score section
 }
 
